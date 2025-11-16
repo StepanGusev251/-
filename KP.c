@@ -43,10 +43,8 @@ int main() {
     printf("КУСОЧНАЯ ФУНКЦИЯ\n");
 
     do {
-        printf("\n1 - Вычислить f(x)\n");
-        printf("2 - Таблица значений\n");
-        printf("3 - Выход\n");
-        printf("Выбор: ");
+        printf("1. Значение функции в точке \n2. Таблица значений \n3. Поиск минимума/максимума \n4. Поиск X по Y \n5. Производная в точке \n0. Выход \n");
+        printf("Введите команду: \n");
         scanf("%d", &choice);
 
         switch (choice) {
@@ -70,13 +68,20 @@ int main() {
                 printf("%6.2f  %8.4f\n", x, cal_f(x));
             }
             break;
-
         case 3:
-            printf("Выход\n");
+            printf("Здесь будет поиск max/min \n");
             break;
-
+        case 4:
+            printf("Здесь можно будет ввести Y и найти X \n");
+            break;
+        case 5:
+            printf("Здесь будет операция по нахождению производной в точке \n");
+            break;
+        case 0:
+            printf("Выход \n");
+            break;
         default:
             printf("Неверный выбор!\n");
         }
-    } while (choice != 3);
+    } while (choice != 0);
 }
